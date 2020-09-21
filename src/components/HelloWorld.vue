@@ -10,7 +10,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: '欢迎来到白雪效果展'
+      msg: '欢迎来到白雪效果展123'
     }
   },
   methods: {
