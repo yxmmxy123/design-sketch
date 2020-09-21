@@ -3,7 +3,7 @@
       <div class="layer-left">
           <div class="layer-left-top">
               <ul>
-                  
+                  <li v-for="(item, index) in dataListOne" :style="{color: colorLi()}" @click="oneGo(item.path)">{{item.name}}</li>
               </ul>
           </div>
           <div class="layer-left-bottom">
@@ -34,11 +34,36 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: ''
+      msg: '',
+      color: '',
+      dataListOne: [
+          {
+              name: "canvas地图",
+              path: "map"
+          }, {
+              name: "简易计算器",
+              path: "calculator"
+          }
+      ]
     }
   },
+  computed: {
+      
+  },
   methods: {
-    
+    colorLi(){
+        let r = Math.floor(Math.random()*255);
+        let g = Math.floor(Math.random()*255);
+        let b = Math.floor(Math.random()*255);
+        let color = 'rgba('+ r +','+ g +','+ b +',0.8)';
+        // this.color = color;
+        return color
+    },
+    oneGo (path) {
+      this.$router.push({
+        name: path
+      })
+    }
   }
 }
 </script>
@@ -56,7 +81,6 @@ export default {
         min-height: 50vh;
         max-height: 50vh;
         overflow-y: scroll;
-        
     }
     .layer-left-top {
         border-right: 10px solid #006400;
@@ -83,5 +107,12 @@ export default {
     .layer-right-bottom {
         border-top: 10px solid #006400;
         border-left: 10px solid #006400;
+    }
+    ul {
+        padding: 20px;
+    }
+    ul li {
+        padding-bottom: 10px;
+        font-weight: 500;
     }
 </style>
