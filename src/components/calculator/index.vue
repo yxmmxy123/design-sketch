@@ -61,7 +61,7 @@ export default {
     //     bOneDec = false; //表示显示屏一个数字中是否已经有一个小数点的状态
         btn_wrapper() {
             // var target = e.target;
-            // if(target.nodeName.toLowerCase() === 'button'){
+            // if(target.nodeName.toLowerCase() === 'button'){ 
                 var btnType = this.clickContent;
                 if(this.content == 'Math Error' && btnType != 'AC'){
                     console.log('=====000')
@@ -83,7 +83,7 @@ export default {
                         this.count--;
                     }
                 }else if(btnType == '='){
-                    console.log('=====333')
+                    console.log('=====333 ')
                     var text = this.content;
                     if(!text){
                         return;
@@ -125,8 +125,8 @@ export default {
                     }
                 } else {
                     
-                } 
-            // }
+                }
+            // } 
         }
     
   }

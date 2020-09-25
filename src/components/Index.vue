@@ -43,6 +43,9 @@ export default {
           }, {
               name: "简易计算器",
               path: "calculator"
+          }, {
+              name: "视频",
+              path: "video"
           }
       ]
     }
@@ -56,7 +59,7 @@ export default {
         let g = Math.floor(Math.random()*255);
         let b = Math.floor(Math.random()*255);
         let color = 'rgba('+ r +','+ g +','+ b +',0.8)';
-        // this.color = color;
+        // this.color = color; 
         return color
     },
     oneGo (path) {
